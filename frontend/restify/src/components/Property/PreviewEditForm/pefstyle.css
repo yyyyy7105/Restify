@@ -1,0 +1,12 @@
+.warning {
+  color: red !important;
+  margin: 1rem auto;
+}
+
+.cross-icon {
+  transition: transform .5s ease-in-out;
+}
+
+.cross-icon:hover {
+  transform: rotate(180deg);
+}

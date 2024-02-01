@@ -1,0 +1,44 @@
+.cards {
+    margin-top: 20rem;
+    width: 80%;
+    height: min-content;
+    
+}
+
+/* .card {
+    width: 100%;
+    height: min-content;
+    margin-bottom: 2.5rem;
+} */
+
+#card1{
+    width: 100%;
+    height: min-content;
+    margin-bottom: 2.5rem;
+}
+
+#card2{
+    width: 100%;
+    height: min-content;
+    margin-bottom: 2.5rem;
+}
+
+.card-text-label {
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+
+#main1 {
+    display: flex;
+    align-items: center;
+    
+}
+
+#link {
+    margin: 2rem;
+}

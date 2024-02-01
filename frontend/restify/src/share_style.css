@@ -1,0 +1,115 @@
+/* footer and header*/
+.footer-head {
+  background-color: #a1c092;
+}
+
+.error {
+  color: red;
+}
+
+.navbar-nav {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item dropdown {
+  align-self: flex-end;
+}
+
+.notification {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 2px;
+}
+
+.notification .badge {
+  position: absolute;
+  border-radius: 50%;
+  scale: 0.9;
+  background: red;
+  color: white;
+}
+
+.bell {
+  color: yellow;
+}
+
+.big:hover {
+  scale: 1.2;
+}
+
+.dropdown-item:hover {
+  background-color: #e8fbdf;
+}
+
+/* login and sign up*/
+.login {
+  width: fit-content;
+  height: min-content;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-color: black;
+  border-style: solid;
+}
+
+.login h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.login form {
+  font-size: 20px;
+}
+
+.login form .form-gourp {
+  margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.signup {
+  width: 30%;
+  height: min-content;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-color: black;
+  border-style: solid;
+}
+
+.signup h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.signup form {
+  font-size: 20px;
+}
+
+.signup form .form-check {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signup form input[type="submit"] {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* static and dynamic star rating*/
+
+.star_checked {
+  color: orange;
+}
+
+/* change bootstrap button*/
+.btn-success {
+  background-color: #a1c092;
+  border-color: #a1c092;
+}

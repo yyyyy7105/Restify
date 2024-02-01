@@ -1,0 +1,45 @@
+
+/* .listing-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 560px;
+  height: 300px;
+} */
+
+/* .index-width {
+  min-width: 270px;
+  max-width: 540px;
+} */
+
+.property-list.card {
+  height: 340px;
+  width: 260px;
+  margin: auto 1rem;
+  box-shadow: 0 0 5px 0 rgba(22, 22, 26, .25);
+}
+
+.index-img {
+  /* width: 100%; */
+  position: relative;
+  min-height: 45%;
+}
+
+.index-img#outer { 
+  overflow:hidden; 
+}
+
+.property-list.card .delete-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 1;
+}
+
+.cross-icon {
+  transition: transform .5s ease-in-out;
+}
+
+.cross-icon:hover {
+  transform: rotate(180deg);
+}

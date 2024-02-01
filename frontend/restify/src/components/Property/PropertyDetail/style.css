@@ -1,0 +1,11 @@
+img.property-host-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 560px) {
+  .carousel {
+      margin: 0 0 2rem 0;
+  }
+}

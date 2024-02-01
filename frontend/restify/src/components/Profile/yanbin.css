@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background-color: white;
+}
+
+main {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.profile {
+  margin-top: 3rem;
+}
+
+.edit-button {
+  margin: 2px;
+  width: 100px;
+}
+
+.save-button {
+  margin: 2px;
+  width: 100px;
+}
+
+.cancel-button {
+  margin: 2px;
+  width: 100px;
+}
+
+.profile .col-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile .col-4 h3 {
+  margin-top: 25px;
+}
+
+img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.link-muted {
+  color: #aaa;
+}
+
+.link-muted:hover {
+  color: #1266f1;
+}
+
+.review {
+  font-size: small;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-30 {
+  height: 30vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+.vh-3 {
+  height: 3vh;
+}
+
+@media screen and (max-width: 480px) {
+  .avatar {
+    scale: 0.8;
+  }
+  hr {
+    margin: 0;
+  }
+}
