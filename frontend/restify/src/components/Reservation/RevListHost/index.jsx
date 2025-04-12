@@ -23,11 +23,11 @@ function RevListHost() {
     let url = "";
     switch (query.selectedStatus) {
       case "":
-        url = `http://localhost:8000/revs/list/${currentUserId}/?user_type=host&page=${query.page}`;
+        url = `${process.env.REACT_APP_API_URL}/revs/list/${currentUserId}/?user_type=host&page=${query.page}`;
         break;
 
       default:
-        url = `http://localhost:8000/revs/list/${currentUserId}/?status=${query.selectedStatus}&user_type=host&page=${query.page}`;
+        url = `${process.env.REACT_APP_API_URL}/revs/list/${currentUserId}/?status=${query.selectedStatus}&user_type=host&page=${query.page}`;
         break;
     }
     fetch(url, requestOptions)

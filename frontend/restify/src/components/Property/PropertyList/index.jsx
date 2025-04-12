@@ -28,7 +28,7 @@ function PropertyList({ host }) {
         query += `&page=${page}`;
 
         if (host.id) {
-            fetch(`http://127.0.0.1:8000/property/user/${host.id}/` + query, {
+            fetch(`${process.env.REACT_APP_API_URL}/property/user/${host.id}/` + query, {
                 headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
             })
             .then(response => response.json())
@@ -42,7 +42,8 @@ function PropertyList({ host }) {
                 });
             });
         } else {
-            fetch("http://127.0.0.1:8000/property/index/" + query)
+            // console.log(`${process.env.REACT_APP_API_URL}/property/index/`)
+            fetch(`${process.env.REACT_APP_API_URL}/property/index/` + query)
             .then(response => response.json())
             .then(json => {
                 // console.log(json);

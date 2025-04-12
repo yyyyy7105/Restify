@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: restify-backend
+    env: python
+    buildCommand: |
+      cd backend/restify
+      pip install -r packages.txt
+      python ./manage.py makemigrations
+      python manage.py migrate
+      python manage.py loaddata ../P3_final_data.json
+      cat media.tar.gz.* | tar xzvf -
+    startCommand: |
+      gunicorn restify.wsgi:application --bind 0.0.0.0:8000
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: restify.settings
+      - key: PYTHON_VERSION
+        value: 3.10

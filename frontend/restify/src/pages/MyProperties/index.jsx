@@ -11,7 +11,7 @@ function MyProperties() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/accounts/${user_id}/profile/`, {
+    fetch(`${process.env.REACT_APP_API_URL}/accounts/${user_id}/profile/`, {
       headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
     })
       .then((response) => {

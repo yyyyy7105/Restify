@@ -23,7 +23,7 @@ const NotificationDetails = () => {
           'Authorization': `Bearer ` + localStorage.getItem('access'),
         }
       };
-      fetch(`http://localhost:8000/notifications/${currentUserId}/${notification_id}/details/`, requestOptions)
+      fetch(`${process.env.REACT_APP_API_URL}/notifications/${currentUserId}/${notification_id}/details/`, requestOptions)
         .then(response => {
           if (response.ok) {
             return response.json();

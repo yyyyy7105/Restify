@@ -11,7 +11,7 @@ function PropertyPage() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/property/${prop_id}/detail/`)
+        fetch(`${process.env.REACT_APP_API_URL}/property/${prop_id}/detail/`)
         .then(response => response.json())
         .then(json => {
             setProp(json);

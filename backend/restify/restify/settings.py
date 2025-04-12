@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o+!6+y^yuyg_2q!#b^2+fmqlh%bjt-y+!kbl74%@te5v*#sf@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['restify-d2a2.onrender.com']
 
 AUTH_USER_MODEL = "accounts.MyUser"
 

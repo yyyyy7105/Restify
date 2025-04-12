@@ -13,7 +13,7 @@ function PropertyListCard({ props, setProps, host }) {
     }
 
     const handleDelete = (prop_id) => () => {
-        fetch(`http://127.0.0.1:8000/property/${prop_id}/delete/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/property/${prop_id}/delete/`, {
             method: 'DELETE', 
             headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
         })
@@ -38,7 +38,7 @@ function PropertyListCard({ props, setProps, host }) {
         <div className="card big property-list">
             <Link to={"/property/" + prop.id + "/detail"} className="stretched-link"></Link>
             <img className="index-img card-img-top w-100"
-                src={prop.preview.length ? "http://127.0.0.1:8000" + prop.preview[0].image : ""} alt=""/>
+                src={prop.preview.length ? `${process.env.REACT_APP_API_URL}` + prop.preview[0].image : ""} alt=""/>
             {
                 host.id
                 // host == 0

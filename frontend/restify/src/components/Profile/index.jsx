@@ -22,7 +22,7 @@ function Profile() {
   const isOwner = targetId === localStorage.getItem("userid");
 
   useEffect(() => {
-    fetch("http://localhost:8000/accounts/" + targetId + "/profile/", {
+    fetch(`${process.env.REACT_APP_API_URL}/accounts/` + targetId + "/profile/", {
       method: "GET",
       headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
     })
