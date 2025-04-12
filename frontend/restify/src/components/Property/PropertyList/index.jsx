@@ -42,7 +42,7 @@ function PropertyList({ host }) {
                 });
             });
         } else {
-            console.log(`${process.env.REACT_APP_API_URL}/property/index/`)
+            // console.log(`${process.env.REACT_APP_API_URL}/property/index/`)
             fetch(`${process.env.REACT_APP_API_URL}/property/index/` + query)
             .then(response => response.json())
             .then(json => {
