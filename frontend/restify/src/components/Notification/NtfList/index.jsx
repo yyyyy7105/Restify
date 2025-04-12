@@ -52,7 +52,7 @@ const Notifications = () => {
   //       }
   //     };
 
-  //     fetch(`http://localhost:8000/notifications/${currentUserId}/list/?showNotReadOnly=${showNotReadOnly.toString()}&page=${page}`, requestOptions)
+  //     fetch(`${process.env.REACT_APP_API_URL}:8000/notifications/${currentUserId}/list/?showNotReadOnly=${showNotReadOnly.toString()}&page=${page}`, requestOptions)
   //       .then(response =>response.json())
   //       .then(json => {
   //         setNotifications(json.results);
@@ -71,7 +71,7 @@ const Notifications = () => {
     };
 
     fetch(
-      `http://localhost:8000/notifications/${currentUserId}/list/?showNotReadOnly=${showNotReadOnly.toString()}&page=${page}`,
+      `${process.env.REACT_APP_API_URL}:8000/notifications/${currentUserId}/list/?showNotReadOnly=${showNotReadOnly.toString()}&page=${page}`,
       requestOptions
     )
       .then((response) => {

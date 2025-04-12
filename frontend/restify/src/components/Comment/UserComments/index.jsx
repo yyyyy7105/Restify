@@ -29,7 +29,7 @@ function UserComments() {
   const fetchData = async () => {
     setLoading(true);
     const response = await fetch(
-      `http://localhost:8000/comment/list/user/${comments.targetId}?page=${page}`,
+      `${process.env.REACT_APP_API_URL}:8000/comment/list/user/${comments.targetId}?page=${page}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
