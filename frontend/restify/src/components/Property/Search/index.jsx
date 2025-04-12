@@ -8,7 +8,7 @@ import "./style.css";
 
 const SearchBar = () => {
   const { setSearch } = useContext(SearchContext);
-  // const reqUrl = `${process.env.REACT_APP_API_URL}:8000/property/index/?search=${search}&num_guest=${numGuest}&amenity=${amenity}&ordering=${ordering}`;
+  // const reqUrl = `${process.env.REACT_APP_API_URL}/property/index/?search=${search}&num_guest=${numGuest}&amenity=${amenity}&ordering=${ordering}`;
   const handleSubmit = (event) => {
     event.preventDefault();
     setSearch(document.getElementById("search-bar-input").value);

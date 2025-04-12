@@ -31,11 +31,11 @@ function RevListGuest() {
     let url = "";
     switch (query.selectedStatus) {
       case "":
-        url = `${process.env.REACT_APP_API_URL}:8000/revs/list/${currentUserId}/?user_type=guest&page=${query.page}`;
+        url = `${process.env.REACT_APP_API_URL}/revs/list/${currentUserId}/?user_type=guest&page=${query.page}`;
         break;
 
       default:
-        url = `${process.env.REACT_APP_API_URL}:8000/revs/list/${currentUserId}/?status=${query.selectedStatus}&user_type=guest&page=${query.page}`;
+        url = `${process.env.REACT_APP_API_URL}/revs/list/${currentUserId}/?status=${query.selectedStatus}&user_type=guest&page=${query.page}`;
         break;
     }
     fetch(url, requestOptions)

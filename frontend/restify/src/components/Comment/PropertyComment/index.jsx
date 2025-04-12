@@ -34,7 +34,7 @@ function PropertyComments(props) {
     }
     setLoading(true);
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}:8000/comment/list/property/${comments.targetId}?page=${page}`,
+      `${process.env.REACT_APP_API_URL}/comment/list/property/${comments.targetId}?page=${page}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ` + localStorage.getItem("access") },

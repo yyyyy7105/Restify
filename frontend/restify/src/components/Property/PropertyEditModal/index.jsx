@@ -43,7 +43,7 @@ function PropertyEditModal() {
         
         event.target.reset();
 
-        fetch(`${process.env.REACT_APP_API_URL}:8000/property/${prop.id}/preview/add/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/property/${prop.id}/preview/add/`, {
             method: 'PUT', 
             headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
             body: formData,

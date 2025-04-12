@@ -87,7 +87,7 @@ function SignupForm() {
     data.append("self_intro", selfIntro);
 
     if (validated) {
-      fetch(`${process.env.REACT_APP_API_URL}:8000/accounts/register/`, {
+      fetch(`${process.env.REACT_APP_API_URL}/accounts/register/`, {
         method: "POST",
         body: data,
       })

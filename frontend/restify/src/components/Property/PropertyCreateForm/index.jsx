@@ -24,7 +24,7 @@ export function PropertyCreateForm({ host, setShow }) {
         formData.append('amenity', event.target.elements['prop-amenity'].value);
         formData.append('capacity', event.target.elements['prop-capacity'].value);
 
-        fetch(`${process.env.REACT_APP_API_URL}:8000/property/add/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/property/add/`, {
             method: 'POST', 
             headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
             body: formData,

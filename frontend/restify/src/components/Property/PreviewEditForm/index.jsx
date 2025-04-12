@@ -11,7 +11,7 @@ function PreviewEditForm() {
     const [ warnPreviewID, setWarnPreviewID ] = useState(0);  // only warn if preview id > 0
     
     const handleDelete = (preview_id) => () => {
-        fetch(`${process.env.REACT_APP_API_URL}:8000/property/preview/${preview_id}/delete/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/property/preview/${preview_id}/delete/`, {
             method: 'DELETE', 
             headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
         })
@@ -40,7 +40,7 @@ function PreviewEditForm() {
             prop.preview.map(preview => (
                 <div key={preview.id} id={`preview_${preview.id}`} className="col-6 border-0 p-1">
                     <div className="listing-edit-img">
-                    <img src={`${process.env.REACT_APP_API_URL}:8000` + preview.image} className="card-img-top" />
+                    <img src={`${process.env.REACT_APP_API_URL}` + preview.image} className="card-img-top" />
                     <Button onClick={handleShowWarn(preview.id)} className="delete-button"
                         style={
                             {backgroundColor: 'white', display: "flex", justifyContent: "center", alignItems: "center", height: "4vh", width: "4vh"}

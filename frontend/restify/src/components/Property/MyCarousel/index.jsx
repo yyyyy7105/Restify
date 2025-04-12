@@ -11,10 +11,10 @@ function MyCarousel() {
             prop.preview.map(preview => (
                 <Carousel.Item key={preview.id}>
                     <div className="carousel-img">
-                        <Link to={`${process.env.REACT_APP_API_URL}:8000` + preview.image}>
+                        <Link to={`${process.env.REACT_APP_API_URL}` + preview.image}>
                         <img
                             className="d-block w-100"
-                            src={`${process.env.REACT_APP_API_URL}:8000` + preview.image}
+                            src={`${process.env.REACT_APP_API_URL}` + preview.image}
                             alt=""
                         />
                         </Link>

@@ -20,7 +20,7 @@ function UpdateForm() {
   const [serverError, setserverError] = useState("");
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}:8000/accounts/` + userid + "/profile/", {
+    fetch(`${process.env.REACT_APP_API_URL}/accounts/` + userid + "/profile/", {
       method: "GET",
       headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
     })
@@ -84,7 +84,7 @@ function UpdateForm() {
     data.append("self_intro", updateForm.selfIntro);
 
     if (validated) {
-      fetch(`${process.env.REACT_APP_API_URL}:8000/accounts/profile/update/`, {
+      fetch(`${process.env.REACT_APP_API_URL}/accounts/profile/update/`, {
         method: "PUT",
         headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
         body: data,

@@ -24,7 +24,7 @@ const ReservationDetails = () => {
   //     }
   //   };
 
-  //   fetch(`${process.env.REACT_APP_API_URL}:8000/revs/detail/${currentUserId}/${reservation_id}/`, requestOptions)
+  //   fetch(`${process.env.REACT_APP_API_URL}/revs/detail/${currentUserId}/${reservation_id}/`, requestOptions)
   //     .then(response => response.json())
   //     .then(json => {
   //       setReservationDetails(json.results[0]);
@@ -40,7 +40,7 @@ const ReservationDetails = () => {
       }
     };
 
-    fetch(`${process.env.REACT_APP_API_URL}:8000/revs/detail/${currentUserId}/${reservation_id}/`, requestOptions)
+    fetch(`${process.env.REACT_APP_API_URL}/revs/detail/${currentUserId}/${reservation_id}/`, requestOptions)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -85,7 +85,7 @@ const ReservationDetails = () => {
     };
 
     setLoading(true);
-    const url = `${process.env.REACT_APP_API_URL}:8000/revs/action/${reservation_id}/${action}/`;
+    const url = `${process.env.REACT_APP_API_URL}/revs/action/${reservation_id}/${action}/`;
     try {
       const response = await fetch(url, requestOptions);
       const data = await response.json();

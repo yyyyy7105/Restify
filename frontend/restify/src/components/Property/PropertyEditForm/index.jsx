@@ -23,7 +23,7 @@ export function PropertyEditForm({ setShow }) {
         formData.append('amenity', event.target.elements['prop-amenity'].value);
         formData.append('capacity', event.target.elements['prop-capacity'].value);
 
-        fetch(`${process.env.REACT_APP_API_URL}:8000/property/${prop.id}/update/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/property/${prop.id}/update/`, {
             method: 'PUT', 
             headers: { 'Authorization': `Bearer ` + localStorage.getItem('access') },
             body: formData,
