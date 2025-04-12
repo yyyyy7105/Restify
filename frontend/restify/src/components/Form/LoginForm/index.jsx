@@ -21,7 +21,7 @@ function LoginForm() {
       body: JSON.stringify({ email: email, password: password }),
     };
 
-    fetch("${process.env.REACT_APP_API_URL}:8000/accounts/login/", loginOptions)
+    fetch(`${process.env.REACT_APP_API_URL}:8000/accounts/login/`, loginOptions)
       .then((response) => {
         if (response.status === 200) {
           setserverError("");
@@ -39,7 +39,7 @@ function LoginForm() {
       })
       .then(() => {
         return fetch(
-          "${process.env.REACT_APP_API_URL}:8000/accounts/" +
+          `${process.env.REACT_APP_API_URL}:8000/accounts/1` +
             localStorage.getItem("userid") +
             "/profile/",
           {

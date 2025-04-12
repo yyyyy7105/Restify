@@ -40,7 +40,7 @@ function PreviewEditForm() {
             prop.preview.map(preview => (
                 <div key={preview.id} id={`preview_${preview.id}`} className="col-6 border-0 p-1">
                     <div className="listing-edit-img">
-                    <img src={"${process.env.REACT_APP_API_URL}:8000" + preview.image} className="card-img-top" />
+                    <img src={`${process.env.REACT_APP_API_URL}:8000` + preview.image} className="card-img-top" />
                     <Button onClick={handleShowWarn(preview.id)} className="delete-button"
                         style={
                             {backgroundColor: 'white', display: "flex", justifyContent: "center", alignItems: "center", height: "4vh", width: "4vh"}

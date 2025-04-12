@@ -5,7 +5,7 @@ export const updateComment = (props) => {
   data.append("content", props.content);
   console.log("update is called");
   fetch(
-    "${process.env.REACT_APP_API_URL}:8000/comment/update/" +
+    `${process.env.REACT_APP_API_URL}:8000/comment/update/` +
       props.id +
       "/" +
       (props.isUser ? "1/" : "0/"),
@@ -27,7 +27,7 @@ export const createComment = (props) => {
 
   data.append("content", props.content);
   fetch(
-    "${process.env.REACT_APP_API_URL}:8000/comment/create/" +
+    `${process.env.REACT_APP_API_URL}:8000/comment/create/` +
       (props.isUser ? "myuser" : "property") +
       "/" +
       props.targetId +
@@ -60,7 +60,7 @@ export const createComment = (props) => {
 };
 
 export const deleteComment = (props) => {
-  fetch("${process.env.REACT_APP_API_URL}:8000/comment/delete/" + props.id + "/", {
+  fetch(`${process.env.REACT_APP_API_URL}:8000/comment/delete/` + props.id + "/", {
     method: "DELETE",
     headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
   })
