@@ -46,7 +46,7 @@ function RevCreationForm() {
       event.target.elements["end-date"].value + "T12:00:00Z"
     );
 
-    fetch(`http://127.0.0.1:8000/revs/create/${prop.id}/`, {
+    fetch(`${process.env.REACT_APP_API_URL}:8000/revs/create/${prop.id}/`, {
       method: "POST",
       headers: { Authorization: `Bearer ` + localStorage.getItem("access") },
       body: formData,
